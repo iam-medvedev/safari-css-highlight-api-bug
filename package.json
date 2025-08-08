@@ -1,0 +1,12 @@
+{
+  "name": "safari-highlight-bug",
+  "type": "module",
+  "scripts": {
+    "dev": "bun run --watch ./src/index.html",
+    "build": "bun build ./src/index.html --minify --outdir=dist"
+  },
+  "devDependencies": {
+    "@types/bun": "1.2.19",
+    "typescript": "5.9.2"
+  }
+}

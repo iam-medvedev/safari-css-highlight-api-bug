@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <main>
+      <section id="editor" contenteditable="true" spellcheck="false">
+        <p>
+          This is the first paragraph. Try clicking here to position your
+          cursor.
+        </p>
+        <p>This is a second paragraph. Click anywhere in this line.</p>
+        <p>
+          Third paragraph with different content. The bug should appear when you
+          just click to position the cursor.
+        </p>
+        <p>
+          Final paragraph for testing. In Safari, you'll see the entire line
+          highlighted in green when cursor is positioned.
+        </p>
+      </section>
+    </main>
+    <script src="./index.ts" type="module"></script>
+  </body>
+</html>
