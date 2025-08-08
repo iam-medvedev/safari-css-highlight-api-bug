@@ -5,6 +5,35 @@
   </head>
   <body>
     <main>
+      <section id="bug-description">
+        <h2>Safari CSS Highlight API Bug</h2>
+        <p>
+          This demo demonstrates a bug in Safari's implementation of the Custom
+          CSS Highlight API. When you position the cursor at the end of a line
+          (collapsed selection), Safari incorrectly highlights the entire line
+          instead of showing just the cursor position.
+        </p>
+
+        <h3>How to reproduce:</h3>
+        <ol>
+          <li>Open this page in Safari</li>
+          <li>Click at the end of any paragraph line above</li>
+          <li>
+            Observe that the entire line gets highlighted in light coral color
+          </li>
+          <li>
+            Check the debug panel - it should show "Collapsed: true" but the
+            highlight spans the whole line
+          </li>
+        </ol>
+
+        <h3>Expected behavior:</h3>
+        <p>
+          In other browsers (Chrome, Firefox), a collapsed selection at the end
+          of a line shows only a cursor position highlight, not the entire line.
+        </p>
+      </section>
+
       <section id="editor" contenteditable="true" spellcheck="false">
         <p>
           This is the first paragraph. Try clicking here to position your
@@ -21,6 +50,24 @@
         </p>
       </section>
     </main>
+
+    <aside id="debug-panel">
+      <h3>Selection Debug</h3>
+      <div class="debug-info">
+        <div class="debug-row">
+          <span class="label">Collapsed:</span>
+          <span id="debug-collapsed">-</span>
+        </div>
+        <div class="debug-row">
+          <span class="label">Start Offset:</span>
+          <span id="debug-start-offset">-</span>
+        </div>
+        <div class="debug-row">
+          <span class="label">End Offset:</span>
+          <span id="debug-end-offset">-</span>
+        </div>
+      </div>
+    </aside>
     <script src="./index.ts" type="module"></script>
   </body>
 </html>
