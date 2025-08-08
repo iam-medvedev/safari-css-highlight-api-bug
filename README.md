@@ -8,12 +8,16 @@ When positioning the cursor at the end of a text line using the CSS Highlight AP
 
 This behavior is inconsistent with other browsers (Chrome, Firefox) and the expected CSS Highlight API specification.
 
+**Related WebKit Bug:** https://bugs.webkit.org/show_bug.cgi?id=297125
+
 ## Expected vs Actual Behavior
 
 **Expected (Chrome/Firefox):** Collapsed selection at line end shows only cursor position highlight
 **Actual (Safari):** Collapsed selection at line end highlights the entire line (at least version 18.3 (20620.2.4.11.5))
 
 ## Live Demo
+
+[DEMO](https://iam-medvedev.github.io/safari-css-highlight-api-bug/)
 
 ```sh
 $ bun dev
