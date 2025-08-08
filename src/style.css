@@ -61,6 +61,27 @@
   color: #007acc;
 }
 
+.debug-buttons {
+  margin-top: 15px;
+  padding-top: 10px;
+  border-top: 1px solid #ddd;
+}
+
+.debug-buttons button {
+  background: #007acc;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 4px;
+  font-size: 11px;
+  cursor: pointer;
+  width: 100%;
+}
+
+.debug-buttons button:hover {
+  background: #005a9e;
+}
+
 #bug-description {
   max-width: 800px;
   margin: 40px 20px 20px 20px;
@@ -76,13 +97,4 @@
 
 #bug-description h3 {
   margin-top: 20px;
-}
-
-#bug-description ol,
-#bug-description ul {
-  padding-left: 20px;
-}
-
-#bug-description li {
-  margin-bottom: 8px;
 }

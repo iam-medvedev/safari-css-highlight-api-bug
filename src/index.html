@@ -17,7 +17,8 @@
         <h3>How to reproduce:</h3>
         <ol>
           <li>Open this page in Safari</li>
-          <li>Click at the end of any paragraph line above</li>
+          <li>Click at the end of any paragraph line in the editor above</li>
+          <li>Or click the "Trigger Safari Bug" button in the debug panel</li>
           <li>
             Observe that the entire line gets highlighted in light coral color
           </li>
@@ -66,6 +67,10 @@
           <span class="label">End Offset:</span>
           <span id="debug-end-offset">-</span>
         </div>
+      </div>
+      
+      <div class="debug-buttons">
+        <button id="trigger-bug-btn" type="button">Trigger Safari Bug</button>
       </div>
     </aside>
     <script src="./index.ts" type="module"></script>

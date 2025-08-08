@@ -1,5 +1,5 @@
 {
-  "name": "safari-highlight-bug",
+  "name": "safari-css-highlight-api-bug",
   "type": "module",
   "scripts": {
     "dev": "bun run --watch ./src/index.html",

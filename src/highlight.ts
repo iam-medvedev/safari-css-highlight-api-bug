@@ -6,12 +6,13 @@ export class TextHighlight {
   private debug: SelectionDebug;
 
   constructor(private selector: string) {
+    const container = document.querySelector<HTMLDivElement>(selector)!;
+
     this.range = new Range();
     this.highlight = new Highlight(this.range);
-    this.debug = new SelectionDebug();
+    this.debug = new SelectionDebug(container);
     CSS.highlights.set("text-highlight", this.highlight);
 
-    const container = document.querySelector(selector)!;
     container.addEventListener("beforeinput", this.updateHighlight);
     document.addEventListener("selectionchange", this.updateHighlight);
   }
